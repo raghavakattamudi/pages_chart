@@ -19,7 +19,7 @@ d3.json("data/data.json").then((importedData) => {
   var trace1 = {
     x: data.map(row => row.greekSearchResults),
     y: data.map(row => row.greekName),
-    text: data.map(row => row.greekName),
+    text: data.map(row => row.romanName),
     name: "Greek",
     type: "bar",
     orientation: "h"
