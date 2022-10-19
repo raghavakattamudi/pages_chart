@@ -10,7 +10,7 @@ d3.json("data/data.json").then((importedData) => {
   });
 
   // Slice the first 10 objects for plotting
-  data = data.slice(0, 10);
+  data = data.slice(0, 5);
 
   // Reverse the array due to Plotly's defaults
   data = data.reverse();
@@ -18,8 +18,8 @@ d3.json("data/data.json").then((importedData) => {
   // Trace1 for the Greek Data
   var trace1 = {
     x: data.map(row => row.greekSearchResults),
-    y: data.map(row => row.greekName),
-    text: data.map(row => row.romanName),
+    y: data.map(row => row.romanName),
+    text: data.map(row => row.greekName),
     name: "Greek",
     type: "bar",
     orientation: "h"
